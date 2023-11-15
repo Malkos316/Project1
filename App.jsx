@@ -16,14 +16,18 @@ function App() {
       'Do laundry',
       'Go to gym',
       'Walk dog',
-      'Study React Native'
-    ]
-  );
+      'Study React Native',
+      'Buy groceries',
+    ] );
+
+  const handleAddTask = (task) => {
+    setTasks([...tasks, task]);
+  };
 
   return (
   <SafeAreaView>
     <ToDoList tasks = {tasks} />
-    <ToDoForm />
+    <ToDoForm onAddTask = {handleAddTask} />
   </SafeAreaView>
 
   );
